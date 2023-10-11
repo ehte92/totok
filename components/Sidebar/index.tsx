@@ -1,4 +1,3 @@
-import { signIn } from "next-auth/react";
 import Link from "next/link";
 import React, { useState } from "react";
 import { AiFillHome, AiOutlineMenu } from "react-icons/ai";
@@ -34,22 +33,7 @@ function Sidebar() {
               </div>
             </Link>
           </div>
-          {!userProfile && (
-            <div className="px-2 py-4 hidden xl:block">
-              <p className="text-gray-400 px-2 py-4 hidden xl:block">
-                Log in to like and comment on videos
-              </p>
-              <div className="pr-4">
-                <button
-                  className="bg-white text-lg text-[#F51997] border-[1px] border-[#F51997] rounded-md px-6 py-3 w-full mt-3 font-semibold outline-none hover:bg-[#F51997] hover:text-white transition-all duration-300"
-                  onClick={() => signIn()}
-                  disabled={false}
-                >
-                  Log In
-                </button>
-              </div>
-            </div>
-          )}
+
           <Discover />
           <SuggestedAccounts />
           <Footer />
